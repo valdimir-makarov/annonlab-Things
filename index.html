@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown with Search</title>
+    <style>
+        :root {
+            --background: 0, 0%, 95%;
+            --foreground: 0, 0%, 20%;
+            --c-primary: 120, 100%, 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dropdown with Search and Options -->
+    <<x-dropdown style="width: 300px;" multi value="option-1,option-2,option-3">
+        <x-dropdown-trigger>
+          <x-dropdown-placeholder placeholder="Select Something"></x-dropdown-placeholder>
+        </x-dropdown-trigger>
+        <x-dropdown-options>
+          <x-dropdown-search></x-dropdown-search>
+          <x-dropdown-divider></x-dropdown-divider>
+          <x-dropdown-option value="option-1">Option 1</x-dropdown-option>
+          <x-dropdown-option value="option-2">Option 2</x-dropdown-option>
+          <x-dropdown-option value="option-3">Option 3</x-dropdown-option>
+          <x-dropdown-option value="option-4">Option 4</x-dropdown-option>
+          <x-dropdown-option value="option-5">Option 5</x-dropdown-option>
+        </x-dropdown-options>
+      </x-dropdown>
+      
+      <x-dropdown style="width: 300px;" value="option-2">
+        <x-dropdown-trigger>
+          <x-dropdown-placeholder placeholder="Select Something"></x-dropdown-placeholder>
+        </x-dropdown-trigger>
+        <x-dropdown-options>
+          <x-dropdown-search></x-dropdown-search>
+          <x-dropdown-divider></x-dropdown-divider>
+          <x-dropdown-option value="option-1">Option 1</x-dropdown-option>
+          <x-dropdown-option value="option-2">Option 2</x-dropdown-option>
+          <x-dropdown-option value="option-3">Option 3</x-dropdown-option>
+          <x-dropdown-option value="option-4">Option 4</x-dropdown-option>
+          <x-dropdown-option value="option-5">Option 5</x-dropdown-option>
+          <x-dropdown-item>
+            <x-dialog>
+              <x-dialog-item>
+                <x-dialog-trigger><button>Click Me Inside Dropdown</button></x-dialog-trigger>
+                <x-dialog-content>
+                  <x-dialog-header>
+                    <span>Header Inside Dropdown</span>
+                  </x-dialog-header>
+                  <form>
+                    <div style="padding: .7rem 1rem;">
+                      <p>Welcome Inside Dropdown</p>
+                    </div>
+                    <x-dialog-footer>
+                      <button>Save Inside Dropdown</button>
+                    </x-dialog-footer>
+                  </form>
+                </x-dialog-content>
+              </x-dialog-item>
+            </x-dialog>
+          </x-dropdown-item>
+        </x-dropdown-options>
+      </x-dropdown>
+    
+      <x-dropdown style="width: 300px;" value="option-3">
+        <x-dropdown-trigger>
+          <x-dropdown-placeholder placeholder="Select Flag"></x-dropdown-placeholder>
+        </x-dropdown-trigger>
+        <x-dropdown-options>
+          <x-dropdown-search></x-dropdown-search>
+          <x-dropdown-divider></x-dropdown-divider>
+          <x-dropdown-option value="option-1">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-2">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 2</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-3">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 3</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-4">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 4</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-5">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 5</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+        </x-dropdown-options>
+      </x-dropdown>
+  
+      <x-dropdown value="option-3" fluid="false" style="width: fit-content;" position="right">
+        <x-dropdown-trigger>
+          <x-dropdown-placeholder placeholder="Select Flag"></x-dropdown-placeholder>
+        </x-dropdown-trigger>
+        <x-dropdown-options>
+          <x-dropdown-search></x-dropdown-search>
+          <x-dropdown-divider></x-dropdown-divider>
+          <x-dropdown-option value="option-1">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-2">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 2</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-3">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 3</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-4">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 4</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+          <x-dropdown-option value="option-5">
+            <x-dropdown-showable>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./flag-italy.webp" alt="" width="30" height="20" style="border-radius: 3px;">
+                <span>Italy 5</span>
+              </div>
+            </x-dropdown-showable>
+            <p style="color: hsl(var(--foreground), .5); margin: 8px 0 0 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci.</p>
+          </x-dropdown-option>
+        </x-dropdown-options>
+      </x-dropdown>
+      
+
+
+
+    <!-- Your scripts -->
+    <script src="dropdown-2.js"></script>
+   
+</body>
+</html>
